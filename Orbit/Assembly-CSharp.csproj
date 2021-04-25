@@ -36,7 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\CheckpointReset.cs" />
+     <Compile Include="Assets\LapCounter.cs" />
+     <Compile Include="Assets\Script\CheckpointManager.cs" />
+     <Compile Include="Assets\Script\Manager.cs" />
      <Compile Include="Assets\Script\RocketMove.cs" />
+     <Compile Include="Assets\Script\checkpoint.cs" />
      <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
      <None Include="Assets\AtomRocket\ReadMe.txt" />
     <Reference Include="UnityEngine">

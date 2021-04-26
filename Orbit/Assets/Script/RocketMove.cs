@@ -6,15 +6,10 @@ public class RocketMove : MonoBehaviour
 {
 
     public Rigidbody sphere;
-    public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, gravPower = 10f;
+    public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, jumpPower = 300f, gravPower;
 
     private float isAccel, isTurning;
 
-    private bool isGrounded;
-
-    public LayerMask isGround;
-    public float groundRayLength = 0.5f;
-    public Transform groundRayPoint;
 
     void Start()
     {
@@ -29,6 +24,11 @@ public class RocketMove : MonoBehaviour
         } else if (Input.GetAxis("Vertical")<0) {
             isAccel = Input.GetAxis("Vertical") * accBackward * 1000f;
         }
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            Debug.Log("jumping");
+            sphere.AddForce(Vector3.up * jumpPower * 1000f);
+            }
+        
 
         isTurning = Input.GetAxis("Horizontal");
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, isTurning * turnPower * Time.deltaTime, 0f));
@@ -37,11 +37,8 @@ public class RocketMove : MonoBehaviour
     }
 
     void FixedUpdate(){
-        isGrounded = false;
-        // Raycast hit;
-
-        // if(Physics.Raycast(groundRayPoint.position, transform.up, out hit, groundRayLength, isGround)) 
-        // {}
+        sphere.AddForce(Vector3.up * -gravPower * 10f);
+    
         if(Mathf.Abs(isAccel) > 0) 
         {
             sphere.AddForce(transform.up * isAccel);

@@ -6,7 +6,7 @@ public class RocketMove : MonoBehaviour
 {
 
     public Rigidbody sphere;
-    public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, jumpPower = 300f, gravPower;
+    public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, thrustPower = 10f, gravPower;
 
     private float isAccel, isTurning;
 
@@ -24,9 +24,8 @@ public class RocketMove : MonoBehaviour
         } else if (Input.GetAxis("Vertical")<0) {
             isAccel = Input.GetAxis("Vertical") * accBackward * 1000f;
         }
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("jumping");
-            sphere.AddForce(Vector3.up * jumpPower * 1000f);
+        if(Input.GetKey(KeyCode.Space)) {
+            sphere.AddForce(transform.forward * thrustPower * 10f);
             }
         
 
@@ -37,7 +36,7 @@ public class RocketMove : MonoBehaviour
     }
 
     void FixedUpdate(){
-        sphere.AddForce(Vector3.up * -gravPower * 10f);
+        sphere.AddForce(Vector3.up * -gravPower * 1f);
     
         if(Mathf.Abs(isAccel) > 0) 
         {

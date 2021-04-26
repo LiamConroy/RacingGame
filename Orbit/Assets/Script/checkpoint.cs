@@ -18,7 +18,7 @@ public class checkpoint : MonoBehaviour
     {
         if (other.transform.CompareTag("PlayerRocket"))
         {
-            CheckpointManager.checkpointIndex = CheckpointManager.checkpointIndex + 1;
+            CheckpointManager.checkpointIndex++;
             Checkpoint.SetActive(false);
             // Debug.Log("checkpoint hit");
         }

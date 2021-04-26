@@ -38,18 +38,19 @@ public class RocketMove : MonoBehaviour
         transform.position = sphere.transform.position;
 
 
-        if(Input.GetKey(KeyCode.P)){
-            if(ThirdCamOn){
-                FirstPerson();
-                ThirdCamOn = false;
-                Debug.Log("FP ON");
-            }
+        if(Input.GetKeyDown(KeyCode.P)){
+            CamSwitch();
+            // if(ThirdCamOn){
+            //     FirstPerson();
+            //     ThirdCamOn = false;
+            //     Debug.Log("FP ON");
+            // }
 
-            else{
-                ThirdPerson();
-                ThirdCamOn = true;
-                Debug.Log("TP ON");
-            }
+            // else{
+            //     ThirdPerson();
+            //     ThirdCamOn = true;
+            //     Debug.Log("TP ON");
+            // }
         }
     }
 
@@ -62,39 +63,37 @@ public class RocketMove : MonoBehaviour
         }
     }
 
-    // void CamSwitch(){
-    //     if(!ThirdCamOn){
-    //            FirstPersonCam .SetActive(false);
-               
+    void CamSwitch(){
+        if(!ThirdCamOn){
+               FirstPersonCam.SetActive(false);
+               ThirdPersonCam.SetActive(true);
 
-    //            ThirdPersonCam.SetActive(true);
+               ThirdCamOn = true;
+               FirstCamOn= false;
+               Debug.Log("Third person");
+            }
 
-    //            ThirdCamOn = true;
-    //            FirstCamOn= false;
-    //            Debug.Log("Third person");
-    //         }
+            else if(!FirstCamOn){
+               FirstPersonCam.SetActive(true);
+               FirstCamOn= true;
 
-    //         else if(!FirstCamOn){
-    //            FirstPersonCam.SetActive(true);
-    //            FirstCamOn= true;
+               ThirdPersonCam.SetActive(false);
+               ThirdCamOn = false;
 
-    //            ThirdPersonCam.SetActive(false);
-    //            ThirdCamOn = false;mumumu
+               Debug.Log("First person");
+            }
+    }
 
-    //            Debug.Log("First person");
-    //         }
+    // void FirstPerson() {   
+    //     ThirdPersonCam.SetActive(false);
+    //     FirstPersonCam.SetActive(true);   
+        
+        
     // }
 
-    void FirstPerson() {   
-        ThirdPersonCam.SetActive(false);
-        FirstPersonCam.SetActive(true);   
+    // void ThirdPerson() {
+    //     FirstPersonCam.SetActive(false); 
+    //     ThirdPersonCam.SetActive(true); 
         
-        
-    }
-
-    void ThirdPerson() {
-        FirstPersonCam.SetActive(false); 
-        ThirdPersonCam.SetActive(true); 
-        
-    }
+    // }
 }

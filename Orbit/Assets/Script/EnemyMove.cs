@@ -7,8 +7,8 @@ public class EnemyMove : MonoBehaviour
     public EnemyPath path;
     Vector3 target;
     int currentPathPoint = 0;
-    public float sensitivity = .01f, speed;
     public Rigidbody sphere;
+    public float speed;
     public GameObject enemy;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class EnemyMove : MonoBehaviour
             }
             target = path.waypoints[currentPathPoint].transform.position;
         }
-        
+        sphere.transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         transform.position = sphere.transform.position;
     }
 }

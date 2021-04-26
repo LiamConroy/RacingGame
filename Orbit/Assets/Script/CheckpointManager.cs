@@ -17,10 +17,10 @@ void Start(){
 void Update(){
 
         Debug.Log(checkpointIndex);
-         
-        if(checkpointIndex == checkpointMax){
+
+        if (checkpointIndex >= checkpointMax) {
             lapIndex = lapIndex + 1;
-            Debug.Log("Lap: "+lapIndex);
+            Debug.Log("Lap: " +lapIndex+"/3");
             checkpointIndex = 1;
         }
 

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyMove : MonoBehaviour
 {
     public EnemyPath path;
     Vector3 target;
     int currentPathPoint = 0;
+    int enemyLaps = 0;
     public Rigidbody sphere;
     public float speed;
     public GameObject enemy;
@@ -27,8 +29,15 @@ public class EnemyMove : MonoBehaviour
             currentPathPoint++;
             if(currentPathPoint>= path.waypoints.Length) {
                 currentPathPoint = 0;
+                enemyLaps++;
+                Debug.Log(enemyLaps);
             }
             target = path.waypoints[currentPathPoint].transform.position;
+        }
+
+        if(enemyLaps>=3) {
+            Debug.Log("You Lose");
+            SceneManager.LoadScene("LoseScene");
         }
         sphere.transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         transform.position = sphere.transform.position;

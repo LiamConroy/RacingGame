@@ -9,7 +9,7 @@ public class RocketMove : MonoBehaviour
     public GameObject FirstPersonCam;
     // public static bool FirstCamOn;
     public Rigidbody sphere;
-    public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, thrustPower = 10f, gravPower;
+    public float accForward, accBackward, speedMax = 30f, turnPower = 180, thrustPower = 10f, gravPower;
 
     private float isAccel, isTurning;
 
@@ -28,7 +28,7 @@ public class RocketMove : MonoBehaviour
             isAccel = Input.GetAxis("Vertical") * accBackward * 1000f;
         }
         if(Input.GetKey(KeyCode.Space)) {
-            sphere.AddForce(transform.forward * thrustPower * 100f);
+            sphere.AddForce(transform.up * thrustPower * 100f);
             }
         
 
@@ -57,7 +57,7 @@ public class RocketMove : MonoBehaviour
     
         if(Mathf.Abs(isAccel) > 0) 
         {
-            sphere.AddForce(transform.up * isAccel);
+            sphere.AddForce(transform.forward * isAccel);
         }
     }
 

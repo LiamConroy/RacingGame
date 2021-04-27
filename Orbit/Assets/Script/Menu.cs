@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
     }
 
     public void StartGame(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("RaceScene");
     }
 
     public void MainMenu(){

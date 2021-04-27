@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
@@ -14,18 +15,23 @@ public class Menu : MonoBehaviour
    
     public static bool ThirdCamOn = true;
     public static bool FirstCamOn;
-    public GameObject ThirdToggle;
-    public GameObject FirstToggle;
+    public TMP_Text camText;
     public GameObject Canvas;
 
     void Awake(){
-        DontDestroyOnLoad(Canvas);
     }
 
     void Start(){
         Canvas.SetActive(true);
         Debug.Log("Canvas Active");
     } 
+
+    void Update() {
+        if(ThirdCamOn){
+            camText.text = "Third Person Mode";
+        } else 
+            camText.text = "First Person Mode";
+    }
 
     public void StartGame(){
         SceneManager.LoadScene("SampleScene");
@@ -56,12 +62,9 @@ public class Menu : MonoBehaviour
     }
 
     public void CamToggle(bool thirdTog){
-        // ThirdToggle.SetActive(true);
-        // FirstToggle.SetActive(false);
         
         if(thirdTog){
-            ThirdToggle.SetActive(true);
-            FirstToggle.SetActive(false); 
+            // camText.text = "Third Person Mode";
 
             ThirdCamOn = true;
             FirstCamOn= false;
@@ -72,8 +75,7 @@ public class Menu : MonoBehaviour
         }
 
         else if(!thirdTog){
-            ThirdToggle.SetActive(false);
-            FirstToggle.SetActive(true);
+            // camText.text = "First Person Mode";
 
             ThirdCamOn = false;
             FirstCamOn= true; 

@@ -5,9 +5,9 @@ using UnityEngine;
 public class RocketMove : MonoBehaviour
 {
     public GameObject ThirdPersonCam;
-    public bool ThirdCamOn = true;
+    // public static bool ThirdCamOn = true;
     public GameObject FirstPersonCam;
-    public bool FirstCamOn;
+    // public static bool FirstCamOn;
     public Rigidbody sphere;
     public float accForward = 5f, accBackward = 3f, speedMax = 30f, turnPower = 180, thrustPower = 10f, gravPower;
 
@@ -40,18 +40,16 @@ public class RocketMove : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.P)){
             CamSwitch();
-            // if(ThirdCamOn){
-            //     FirstPerson();
-            //     ThirdCamOn = false;
-            //     Debug.Log("FP ON");
-            // }
-
-            // else{
-            //     ThirdPerson();
-            //     ThirdCamOn = true;
-            //     Debug.Log("TP ON");
-            // }
         }
+
+        if(!Menu.ThirdCamOn){
+            FirstPerson();
+        }
+
+        else if(Menu.ThirdCamOn){
+            ThirdPerson();
+        }
+  
     }
 
     void FixedUpdate(){
@@ -63,37 +61,36 @@ public class RocketMove : MonoBehaviour
         }
     }
 
-    void CamSwitch(){
-        if(!ThirdCamOn){
+    public void CamSwitch(){
+        if(!Menu.ThirdCamOn){
                FirstPersonCam.SetActive(false);
                ThirdPersonCam.SetActive(true);
 
-               ThirdCamOn = true;
-               FirstCamOn= false;
+               Menu.ThirdCamOn = true;
+               Menu.FirstCamOn= false;
                Debug.Log("Third person");
             }
 
-            else if(!FirstCamOn){
+            else if(!Menu.FirstCamOn){
                FirstPersonCam.SetActive(true);
-               FirstCamOn= true;
+               Menu.FirstCamOn= true;
 
                ThirdPersonCam.SetActive(false);
-               ThirdCamOn = false;
+               Menu.ThirdCamOn = false;
 
                Debug.Log("First person");
             }
     }
 
-    // void FirstPerson() {   
-    //     ThirdPersonCam.SetActive(false);
-    //     FirstPersonCam.SetActive(true);   
-        
-        
-    // }
+    void FirstPerson() {   
+        ThirdPersonCam.SetActive(false);
+        FirstPersonCam.SetActive(true);         
+    }
 
-    // void ThirdPerson() {
-    //     FirstPersonCam.SetActive(false); 
-    //     ThirdPersonCam.SetActive(true); 
-        
-    // }
+    void ThirdPerson() {
+        FirstPersonCam.SetActive(false); 
+        ThirdPersonCam.SetActive(true);     
+    }
+
+    
 }

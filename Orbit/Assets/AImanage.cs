@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class AImanage : MonoBehaviour
 {
-   #region Singleton
+//    #region Singleton
 
-    public static AImanage instance;
+//     public static AImanage instance;
 
-    void Awake()
-    {
-        instance = this;
-    }
+//     void Awake()
+//     {
+//         instance = this;
+//     }
 
-    #endregion
+//     #endregion
 
-    public GameObject enemy;
+//     public GameObject enemy;
 }

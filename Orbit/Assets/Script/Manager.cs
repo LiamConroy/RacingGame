@@ -5,17 +5,17 @@ using UnityEngine;
 public class Manager : MonoBehaviour
 {
 
-    #region Singleton
+    // #region Singleton
 
-    public static Manager instance;
+    // public static Manager instance;
 
-    void Awake()
-    {
-        instance = this;
-    }
+    // void Awake()
+    // {
+    //     instance = this;
+    // }
 
-    #endregion
+    // #endregion
 
-    public GameObject player;
+    // public GameObject player;
 
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5750577541646509142}
   - component: {fileID: 1289668643104269155}
   - component: {fileID: 1886491980194295739}
+  - component: {fileID: 2155231582544280138}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (7)
   m_TagString: Untagged
@@ -83,6 +84,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &2155231582544280138
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052253602664396764}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: 0, y: 0.12223154, z: -0.12225206}
 --- !u!1 &1737989283816999848
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +109,7 @@ GameObject:
   - component: {fileID: 5750577540831844293}
   - component: {fileID: 8243923006636367353}
   - component: {fileID: 3668591988153265479}
+  - component: {fileID: 5208765010618316835}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (5)
   m_TagString: Untagged
@@ -166,6 +181,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &5208765010618316835
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737989283816999848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: -0.0000038146973, y: 0.12223154, z: -0.1222368}
 --- !u!1 &1910554516599052147
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +206,7 @@ GameObject:
   - component: {fileID: 5750577540142465395}
   - component: {fileID: 6058829801764011630}
   - component: {fileID: 1120299281941088463}
+  - component: {fileID: 6874845898108376726}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (4)
   m_TagString: Untagged
@@ -249,6 +278,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &6874845898108376726
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910554516599052147}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: 0, y: 0.12223154, z: -0.1222368}
 --- !u!1 &5747926964945122055
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +303,7 @@ GameObject:
   - component: {fileID: 5750577541837615633}
   - component: {fileID: 2915107383827004727}
   - component: {fileID: 1541941364825568096}
+  - component: {fileID: 1926370752403269190}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (2)
   m_TagString: Untagged
@@ -332,6 +375,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &1926370752403269190
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5747926964945122055}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: -0.0000038146973, y: 0.12223154, z: -0.12225206}
 --- !u!1 &5750577540361966686
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +440,7 @@ GameObject:
   - component: {fileID: 5750577540020291117}
   - component: {fileID: 2911537974205419010}
   - component: {fileID: 5235493288022761826}
+  - component: {fileID: 957523752564981854}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (6)
   m_TagString: Untagged
@@ -455,6 +512,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &957523752564981854
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6269626336169436195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: 0, y: 0.12223154, z: -0.12225206}
 --- !u!1 &6378680710164517089
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,6 +537,7 @@ GameObject:
   - component: {fileID: 5750577541847295682}
   - component: {fileID: 2737002296387785008}
   - component: {fileID: 3201221046372688352}
+  - component: {fileID: 4752067116828479479}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (1)
   m_TagString: Untagged
@@ -538,6 +609,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &4752067116828479479
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378680710164517089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: 0, y: 0.12223154, z: -0.1222368}
 --- !u!1 &6613089148019317462
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +634,7 @@ GameObject:
   - component: {fileID: 5750577541951957462}
   - component: {fileID: 7931157237321007182}
   - component: {fileID: 1489350573902294045}
+  - component: {fileID: 7489567324593124348}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3
   m_TagString: Untagged
@@ -621,6 +706,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &7489567324593124348
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613089148019317462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: 0, y: 0.12223154, z: -0.1222368}
 --- !u!1 &9134943603778442725
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +731,7 @@ GameObject:
   - component: {fileID: 5750577540050161663}
   - component: {fileID: 2859570499903289374}
   - component: {fileID: 4668024318927768931}
+  - component: {fileID: 7406908038581877575}
   m_Layer: 0
   m_Name: Glowing Rock Blue 3 (3)
   m_TagString: Untagged
@@ -704,3 +803,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &7406908038581877575
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9134943603778442725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5567952
+  m_Center: {x: -0.0000076293945, y: 0.12223154, z: -0.1222368}

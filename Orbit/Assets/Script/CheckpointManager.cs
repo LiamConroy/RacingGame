@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CheckpointManager : MonoBehaviour
 {
     public static int checkpointIndex;
-    public int checkpointMax = 13;
+    public int checkpointMax;
     public static int lapIndex = 1;
     public int lapMax = 4;
     
@@ -16,9 +16,9 @@ void Start(){
 }
 void Update(){
 
-        Debug.Log(checkpointIndex);
+        Debug.Log(checkpointIndex + "/" + checkpointMax);
 
-        if (checkpointIndex >= checkpointMax) {
+        if (checkpointIndex > checkpointMax) {
             lapIndex = lapIndex + 1;
             Debug.Log("Lap: " +lapIndex+ "/3");
             checkpointIndex = 1;

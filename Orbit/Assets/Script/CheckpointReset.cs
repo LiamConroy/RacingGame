@@ -11,7 +11,7 @@ public GameObject[] Checkpoints;
         if (other.transform.CompareTag("PlayerRocket"))
         {
 
-            for (var i = 0; i < 15; i++)
+            for (var i = 0; i < Checkpoints.Length; i++)
             {
               Checkpoints[i].SetActive(true);  
             }  

@@ -9,7 +9,7 @@ public class RocketMove : MonoBehaviour
     public GameObject FirstPersonCam;
     // public static bool FirstCamOn;
     public Rigidbody sphere;
-    public float accForward, accBackward, speedMax = 30f, turnPower = 180, thrustPower = 10f, gravPower;
+    public float accForward, accBackward, speedMax = 30f, turnPower = 180, thrustPower, gravPower;
 
     private float isAccel, isTurning;
 

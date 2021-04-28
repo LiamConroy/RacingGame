@@ -7,14 +7,15 @@ public class EnemyMove : MonoBehaviour
 {
     public EnemyPath path;
     Vector3 target;
-    int currentPathPoint = 0;
-    int enemyLaps = 0;
+    public static int currentPathPoint = 0;
+    public static int enemyLaps = 1;
     public Rigidbody sphere;
     public float speed;
     public GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
+        enemyLaps = 1;
         target = path.waypoints[currentPathPoint].transform.position;
     }
 
@@ -35,7 +36,9 @@ public class EnemyMove : MonoBehaviour
             target = path.waypoints[currentPathPoint].transform.position;
         }
 
-        if(enemyLaps>=3) {
+        Debug.Log(currentPathPoint);
+
+        if(enemyLaps==4) {
             Debug.Log("You Lose");
             SceneManager.LoadScene("LoseScene");
         }

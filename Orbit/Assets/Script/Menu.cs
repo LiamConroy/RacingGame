@@ -61,6 +61,18 @@ public class Menu : MonoBehaviour
         Debug.Log("Canvas Inactive");
     }
 
+    public void LevelSelect(){
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void LevelOne(){
+        SceneManager.LoadScene("RaceScene");
+    }
+
+    public void LevelTwo(){
+        SceneManager.LoadScene("RaceScene1");
+    }
+
     public void CamToggle(bool thirdTog){
         
         if(thirdTog){

@@ -17,6 +17,9 @@ public class Placement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
         if(EnemyMove.currentPathPoint < CheckpointManager.checkpointIndex){
             if(EnemyMove.enemyLaps < CheckpointManager.lapIndex){
                 Debug.Log("You are in 1st Place");

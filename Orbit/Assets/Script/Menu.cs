@@ -34,7 +34,7 @@ public class Menu : MonoBehaviour
     }
 
     public void StartGame(){
-        SceneManager.LoadScene("RaceScene");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void MainMenu(){
@@ -61,16 +61,12 @@ public class Menu : MonoBehaviour
         Debug.Log("Canvas Inactive");
     }
 
-    public void LevelSelect(){
-        SceneManager.LoadScene("LevelSelect");
-    }
-
     public void LevelOne(){
-        SceneManager.LoadScene("RaceScene");
+        SceneManager.LoadScene("Supernova");
     }
 
     public void LevelTwo(){
-        SceneManager.LoadScene("RaceScene1");
+        SceneManager.LoadScene("SpaceStation");
     }
 
     public void CamToggle(bool thirdTog){

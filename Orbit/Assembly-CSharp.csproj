@@ -44,6 +44,7 @@
      <Compile Include="Assets\Script\EnemyPath.cs" />
      <Compile Include="Assets\Script\LapCounter.cs" />
      <Compile Include="Assets\Script\Menu.cs" />
+     <Compile Include="Assets\Script\MusicManager.cs" />
      <Compile Include="Assets\Script\RocketMove.cs" />
      <Compile Include="Assets\Script\checkpoint.cs" />
      <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />

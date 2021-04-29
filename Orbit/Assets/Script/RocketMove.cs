@@ -7,6 +7,7 @@ public class RocketMove : MonoBehaviour
     public GameObject ThirdPersonCam;
     // public static bool ThirdCamOn = true;
     public GameObject FirstPersonCam;
+    public AudioSource jump;
     // public static bool FirstCamOn;
     public Rigidbody sphere;
     public float accForward, accBackward, speedMax = 30f, turnPower = 180, thrustPower, gravPower;
@@ -30,6 +31,9 @@ public class RocketMove : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)) {
             sphere.AddForce(transform.up * thrustPower * 100f);
             }
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            jump.Play();
+        }
         
 
         isTurning = Input.GetAxis("Horizontal");

@@ -9,14 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: da40ced1c9253b04684f4b606a2fe2c0
   - enabled: 1
-    path: Assets/Scenes/RaceScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 1611cdc999c31ba47aafb89503b0b12d
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: afa3838142aa73644a4ce2ae0e13c5c3
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 537d19b15f0c4784f9e0d3d165ba46e6
+  - enabled: 1
+    path: Assets/Scenes/Supernova.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/SpaceStation.unity
+    guid: ae1b6b916fe72fc4d802faffe7164430
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: 6268044c6b8b82642963a9cc2a1fc716

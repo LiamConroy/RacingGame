@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 public class Menu : MonoBehaviour
 {
 
@@ -67,6 +68,13 @@ public class Menu : MonoBehaviour
 
     public void LevelTwo(){
         SceneManager.LoadScene("SpaceStation");
+    }
+
+
+   public AudioMixer audioMixer; 
+    public void Volume(float volume){
+        Debug.Log(volume);
+        audioMixer.SetFloat("Volume",volume);
     }
 
     public void CamToggle(bool thirdTog){

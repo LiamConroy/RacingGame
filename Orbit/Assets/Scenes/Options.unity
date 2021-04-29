@@ -1250,6 +1250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camText: {fileID: 1895487133}
   Canvas: {fileID: 932472990}
+  audioMixer: {fileID: 24100000, guid: 8df6f469b7ef30e419e29b0457e4456f, type: 2}
 --- !u!114 &1538178731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,13 +2013,24 @@ MonoBehaviour:
   m_FillRect: {fileID: 864478395}
   m_HandleRect: {fileID: 1653113066}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1538178730}
+        m_MethodName: Volume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2091999721
 PrefabInstance:
   m_ObjectHideFlags: 0
